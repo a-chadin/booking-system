@@ -1,0 +1,7 @@
+<h1><%= @venue.name %><br></h1>
+<h2>Bookings</h2>
+<% @venue.bookings.each do |booking| %>
+    User: <%= booking.user.username %><br>
+    From: <%= booking.from %><br>
+    To: <%= booking.to %><br>
+  <% end %>
