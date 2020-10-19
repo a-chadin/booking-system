@@ -1,0 +1,13 @@
+<h1>Sessions#new1</h1>
+<p>
+<% flash.each do |name, msg| -%>
+  <%= content_tag :div, msg, class: name %>
+<% end -%>
+<%= form_with(url: "/login", method: "post") do %>
+    <%= label_tag(:username, "Username:") %>
+    <%= text_field_tag(:username) %>
+    <%= label_tag(:password, "Password:") %>
+    <%= password_field_tag(:password) %>
+    <%= submit_tag("Login") %>
+  <% end %>
+</p>
