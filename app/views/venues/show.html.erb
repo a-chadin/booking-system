@@ -5,3 +5,6 @@
     From: <%= booking.from %><br>
     To: <%= booking.to %><br>
   <% end %>
+
+
+  <%= link_to 'Book', new_venue_booking_path(@venue.id) %>
