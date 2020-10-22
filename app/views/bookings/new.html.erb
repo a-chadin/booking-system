@@ -1,0 +1,9 @@
+<h1>Bookings#new</h1>
+
+<%= form_with(model: [ @venue, @venue.bookings.build ], local: true) do |form| %>
+    <%= label_tag(:from, "From:") %>
+    <%= datetime_local_field(:booking, :from) %>
+    <%= label_tag(:from, "To:") %>
+    <%= datetime_local_field(:booking, :to) %>
+    <%= submit_tag("Book") %>
+  <% end %>
